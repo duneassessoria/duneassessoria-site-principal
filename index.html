@@ -311,7 +311,14 @@
     </div>
 </section></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/embla/embla.min.js"></script>  <script src="assets/embla/script.js"></script>  <script src="assets/theme/js/script.js"></script>  
   
-  
+<script>
+  // Remove o ID (hash) da URL assim que a página é carregada
+  window.addEventListener('DOMContentLoaded', () => {
+    const newUrl = window.location.href.split('#')[0]; // Remove o #id da URL
+    history.replaceState(null, null, newUrl); // Atualiza o URL na barra de endereços
+  });
+</script>
+	
  <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
     <input name="animation" type="hidden">
   </body>
