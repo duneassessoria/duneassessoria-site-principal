@@ -1,2 +1,4 @@
 RewriteEngine On
 RewriteRule ^([0-9A-Za-z-_]+)$ /$1.html
+
+ErrorDocument 404 /erro-404.html
