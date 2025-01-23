@@ -28,6 +28,25 @@
   <!-- Favicon -->
   <link rel="shortcut icon" href="assets/images/logo-dune-icon.jpg" type="image/x-icon">
 
+  <!-- Estilos críticos (diretamente no cabeçalho) -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+  </style>
+
+  <!-- CSS não crítico, carregado de forma assíncrona -->
+  <link rel="stylesheet" href="assets/styles.css" id="lazyCSS" media="none">
+  
+  <script>
+    // Adia o carregamento do CSS
+    var link = document.getElementById("lazyCSS");
+    window.onload = function() {
+      link.media = "all"; // Altera o "media" para carregar o CSS quando a página estiver carregada
+    };
+  </script>
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
